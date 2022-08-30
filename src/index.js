@@ -10,10 +10,10 @@ import {legacy_createStore as createStore} from 'redux'
 
 import './index.css';
 import App from './App';
-import movies from './reducer';
+import rootReducer from './reducer';
 
 // 
-const store = createStore(movies);
+const store = createStore(rootReducer);
 // console.log('store', store);
 // console.log(' before state', store.getState());
 

@@ -37,8 +37,8 @@ const {store} = this.props;
 isFav = (movie)=>{
   //we will have  to get the state and check that whether it contain that movie or not 
   // debugger;
-  const {favourite} = this.props.store.getState();
-  const index = favourite.indexOf(movie);
+  const {movies} = this.props.store.getState();
+  const index =movies.favourite.indexOf(movie);
   if(index !==-1){
     // returning is favourite
    return true;
@@ -55,7 +55,11 @@ onChangeTab = (val)=>{
 
 
   render() {
-    const {list,favourite,showFavourite} = this.props.store.getState(); // now as we know that we will be getting a state as a object so we will have to only fetch the list of movies 
+// as we know that we have created one reducer which will service at all the point and to fetch the movie only we have to fetch the root 
+const {movies} = this.props.store.getState();  //! the state that we will get is {movie={},search={}}
+
+
+    const {list,favourite,showFavourite} = movies //! now as we know that we will be getting a state as a object so we will have to only fetch the list of movies 
     console.log("RENDERED",this.props.store.getState())
     const displayMovie = showFavourite ? favourite:list;
     return (
