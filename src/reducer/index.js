@@ -64,7 +64,7 @@ export function search(state = initialSearchState, action) {
   ...state,
   result:action.movie,
   showSearchResult:true
-  // afdjkhbffb
+  
  };
  case ADD_MOVIE_TO_LIST:
   return{
