@@ -31,6 +31,7 @@ export function movies(state = initialState, action) {
       return {
         ...state,
         favourite: newFilteredArray
+        // no comment here
       }
     case SET_SHOW_FAVOURITES:
       return {
@@ -45,6 +46,7 @@ export function movies(state = initialState, action) {
 
     default:
       return state;
+      // add just comment 
 
   }
 
